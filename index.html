@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+
+<!-- <button onclick="myFunction()">Try it</button> --> 
+
+<p id="demo"></p>
+
+
+        <select  class="form-control" id="value1" style="width:10%;height:30px;">
+            <option value="Dollar">Dollar</option>
+            <option value="Pound">Pound</option>
+            <option value="Euro">Euro</option>
+            <option value="Yen">Yen</option>
+            <option value="Yuan">Yuan</option>
+        </select>
+        <br><br>
+       
+
+<input type="text"  id="value2"> <br></br>
+
+<input type="submit" id="value3" onclick="Calculate()"> <br><br>
+
+<label>To Naira</label></br></br>
+
+<input type="text" class="form-control"  id="value4" disabled="disabled"/>
+
+<script>
+
+function Currency(){
+    
+    var x = document.getElementById("value1").value;
+
+    return x;
+
+}
+
+function Calculate(){
+
+    x = Currency();
+
+    var text = "";
+
+
+    var y = document.getElementById("value2").value;
+
+   
+     
+    switch(x){
+        
+        case "Dollar":
+					document.getElementById("value4").value = y * 365.50;
+		break;
+
+        case "Pound":
+					document.getElementById("value4").value = y * 468.17;
+		break;
+
+        case "Euro":
+					document.getElementById("value4").value = y * 408.61;
+		break;
+
+        case "Yen":
+					document.getElementById("value4").value = y * 3.61;
+		break;
+
+        case "Yuan":
+					document.getElementById("value4").value = y * 5.50;
+		break;
+
+    }
+
+
+}
+
+
+</script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/js/tryit.asp?filename=tryjs_prompt by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Jul 2018 02:10:52 GMT -->
+</html>
